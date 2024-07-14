@@ -1,0 +1,33 @@
+extends layout
+
+block content
+ nav.navbar.bg-dark.border-bottom.border-body.navbar-expand-lg(style='position: fixed; top: 0; width: 100%; z-index: 5', data-bs-theme='dark')
+  a.navbar-brand(href='#home')
+    h1.text-start.fw-normal.fs-2.ms-2.mt-2 D.L Agency
+  #navbarSupportedContent
+    ul.nav.my-3.me-2.px-0.position-absolute.top-0.end-0
+      li.nav-item
+        a.nav-link.text-light.active(aria-current='page', href='/') Home
+      li.nav-item
+        a.nav-link.text-light(href='/logout') Logout
+ .container(style='margin-top: 120px').px-5
+    h1.text-center This is your profile: #{name} 
+    h2.text-center.fs-3.mb-5 All these trip offers are loaded directly from the database.
+    .row.mb-5  
+      each trip in trips
+         .col-4 
+            .card.mb-5
+              img.card-img-top(src=trip.image, alt='img')
+              .card-body
+                h5.card-title.titolo5.text-center #{trip.location}
+                p.card-text.text-center #{trip.description}
+                .text-center
+                  a.btn.btn-primary(href=`/confirm/${trip.id}`, type='submit') Book a trip!
+ .bg-dark.text-center.text-light.py-3(style='width: 100%')
+    p.text-center Dream Holiday Agency
+    a(style='color: darkgray', href='#')
+      p.text-center Home
+    a(style='color: darkgray', href='')
+      p.text-center Terms &amp; Conditions
+    p.text-center P. Iva: 8709859089097
+ script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', integrity='sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz', crossorigin='anonymous')

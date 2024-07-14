@@ -1,0 +1,207 @@
+extends layout
+
+block content
+
+ nav.navbar.bg-dark.border-bottom.border-body.navbar-expand-lg(style='position: fixed; top: 0; width: 100%; z-index: 5', data-bs-theme='dark')
+  a.navbar-brand(href='#home')
+    h1.text-start.fw-normal.fs-2.ms-2.mt-2 D.L Agency
+  #navbarSupportedContent
+    ul.nav.my-3.me-2.px-0.position-absolute.top-0.end-0
+      li.nav-item
+        a.nav-link.text-light.active(aria-current='page', href='#') Home
+      li.nav-item
+        a.nav-link.text-light(href='#locations') Locations
+      li.nav-item
+        a.nav-link.text-light(href='#aboutUs') About us
+      li.nav-item
+        a.nav-link.text-light(href='#questions') Questions
+        li.nav-item
+        a.nav-link.text-light(href='/Registration') Sign up
+      li.nav-item
+        a.nav-link.text-light(href='/login') Login 
+ .container(style='margin-top: 120px')
+  h1#home.text-center.fs-2.fw-bold.ms-2.mt-2
+    | Dream Holiday Agency
+  h2.text-center.fs-3.ms-2.mt-3 Are you looking for the right holiday for you?
+  .container.text-start
+    .row.my-5
+      .col-lg.mt-4.fw-medium
+        p.fs-6
+          | Dream Holiday Agency: we make your travel dreams come true.With years of experience in the sector, we offer customized packages for each destination.
+        p.fs-6
+          | From heavenly beaches to mountain adventures, we take care of every detail to ensure an unforgettable experience.
+        p.fs-6
+          | Our team of experts is always available to advise and support you in planning the perfect trip.
+        p.fs-6
+          | Trust Dream Holiday Agency and turn your holidays into precious memories. Discover the world with us!
+        a.btn.btn-primary.mt-4.fw-medium(type='submit', href='/registration') Discover our travel offers!
+        #locations
+      .col-lg.d-flex
+        .text-center.mx-auto
+          img.my-4.img-fluid.rounded(style='max-width: 500px', src='https://images.pexels.com/photos/3756158/pexels-photo-3756158.jpeg?auto=compress&cs=tinysrgb&w=600', alt='Travel Agency')
+  hr
+  h3.text-center.mt-4 The most popular locations:
+  .containerCol.text-center.my-5
+    .row
+      .col-sm.mb-4.mx-4
+        .card
+          img.card-img-top(src='https://images.pexels.com/photos/3873681/pexels-photo-3873681.jpeg?auto=compress&cs=tinysrgb&w=600', alt='Egypt')
+          .card-body
+            h5.card-title.titolo5.text-center Egypt
+            p.card-text.text-center
+              | Exploring Egypt is magical. Wandering through ancient pyramids, cruising the Nile, and marveling at the Sphinx. The rich history and vibrant culture left an unforgettable impression.
+            .text-center
+              a.btn.btn-primary(href='/registration', type='submit') Book a trip!
+      .col-sm.mb-4.mx-4
+        .card
+          img.card-img-top(src='https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&w=600', alt='Japan')
+          .card-body.text-center
+            h5.card-title.text-center Japan
+            p.card-text.text-center
+              | Japan&apos;s blend of tradition and modernity amaz everyone. Savoring sushi in Tokyo, witnessing the serenity of Kyoto&apos;s temples, and experiencing the futuristic vibe of Osaka. An unforgettable cultural journey.
+            a.btn.btn-primary(href='/registration') Book a trip!
+      .col-sm.mx-4
+        .card
+          img.card-img-top(src='https://images.pexels.com/photos/2868242/pexels-photo-2868242.jpeg?auto=compress&cs=tinysrgb&w=600', alt='Brasil')
+          .card-body.text-center
+            h5.card-title.text-center Brasil
+            p.card-text.text-center
+              | Brazil&apos;s vibrant culture will amaze you. Dancing in Rio&apos;s Carnival, exploring the Amazon rainforest, and relaxing on Bahia&apos;s stunning beaches. The warmth and energy of the people made it unforgettable.
+            a.btn.btn-primary(href='/registration') Book a trip!
+        #aboutUs
+  hr
+  h3.text-center.mt-4 Why should you choose us?
+  .container
+    .row.my-5
+      .col-sm.my-3
+        .card(style='width: 100%')
+          svg.bi.bi-cash-coin.mx-auto.mt-4.mb-2(xmlns='http://www.w3.org/2000/svg', width='40%', height='40%', fill='currentColor', viewbox='0 0 16 16')
+            path(fill-rule='evenodd', d='M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8m5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0')
+            path(d='M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195z')
+            path(d='M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083q.088-.517.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1z')
+            path(d='M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 6 6 0 0 1 3.13-1.567')
+          .card-body
+            h5.card-title.text-center Money
+            p.card-text.text-center.mb-3
+              | We have partnerships with the best hotels around the world so we can offer the best stay at the best price.
+      .col-sm.my-3
+        .card(style='width: 100%')
+          svg.bi.bi-airplane-engines.mx-auto.mt-4.mb-2(xmlns='http://www.w3.org/2000/svg', width='40%', height='40%', fill='currentColor', viewbox='0 0 16 16')
+            path(d='M8 0c-.787 0-1.292.592-1.572 1.151A4.35 4.35 0 0 0 6 3v3.691l-2 1V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.191l-1.17.585A1.5 1.5 0 0 0 0 10.618V12a.5.5 0 0 0 .582.493l1.631-.272.313.937a.5.5 0 0 0 .948 0l.405-1.214 2.21-.369.375 2.253-1.318 1.318A.5.5 0 0 0 5.5 16h5a.5.5 0 0 0 .354-.854l-1.318-1.318.375-2.253 2.21.369.405 1.214a.5.5 0 0 0 .948 0l.313-.937 1.63.272A.5.5 0 0 0 16 12v-1.382a1.5 1.5 0 0 0-.83-1.342L14 8.691V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v.191l-2-1V3c0-.568-.14-1.271-.428-1.849C9.292.591 8.787 0 8 0M7 3c0-.432.11-.979.322-1.401C7.542 1.159 7.787 1 8 1s.458.158.678.599C8.889 2.02 9 2.569 9 3v4a.5.5 0 0 0 .276.447l5.448 2.724a.5.5 0 0 1 .276.447v.792l-5.418-.903a.5.5 0 0 0-.575.41l-.5 3a.5.5 0 0 0 .14.437l.646.646H6.707l.647-.646a.5.5 0 0 0 .14-.436l-.5-3a.5.5 0 0 0-.576-.411L1 11.41v-.792a.5.5 0 0 1 .276-.447l5.448-2.724A.5.5 0 0 0 7 7z')
+          .card-body
+            h5.card-title.text-center Flight included
+            p.card-text.text-center.mb-3
+              | Many companies will make you pay for airfare separately; with us The flight will be included in the package.
+      .col-sm.my-3
+        .card(style='width: 100%')
+          svg.bi.bi-calendar2-date.mx-auto.mt-4.mb-2(xmlns='http://www.w3.org/2000/svg', width='40%', height='40%', fill='currentColor', viewbox='0 0 16 16')
+            path(d='M6.445 12.688V7.354h-.633A13 13 0 0 0 4.5 8.16v.695c.375-.257.969-.62 1.258-.777h.012v4.61zm1.188-1.305c.047.64.594 1.406 1.703 1.406 1.258 0 2-1.066 2-2.871 0-1.934-.781-2.668-1.953-2.668-.926 0-1.797.672-1.797 1.809 0 1.16.824 1.77 1.676 1.77.746 0 1.23-.376 1.383-.79h.027c-.004 1.316-.461 2.164-1.305 2.164-.664 0-1.008-.45-1.05-.82zm2.953-2.317c0 .696-.559 1.18-1.184 1.18-.601 0-1.144-.383-1.144-1.2 0-.823.582-1.21 1.168-1.21.633 0 1.16.398 1.16 1.23')
+            path(d='M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z')
+            path(d='M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5z')
+          .card-body
+            h5.card-title.text-center Flexible dates
+            p.card-text.text-center.mb-3
+              | You will be able to choose the dates that best suit your needs and commitments
+      .col-sm.my-3
+        .card(style='width: 100%')
+          svg.bi.bi-images.mx-auto.mt-4.mb-2(xmlns='http://www.w3.org/2000/svg', width='40%', height='40%', fill='currentColor', viewbox='0 0 16 16')
+            path(d='M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3')
+            path(d='M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2M14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1M2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1z')
+          .card-body
+            h5.card-title.text-center Free shooting
+            p.card-text.text-center
+              | One of our photographers will take the best possible photos for you during your adventures
+            #questions
+  hr
+  .container.text-start.my-5
+    #accordionExample.accordion
+      .accordion-item
+        h2.accordion-header
+          button.accordion-button.fs-5.fw-medium(type='button', data-bs-toggle='collapse', data-bs-target='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+            | Frequent Questions:
+        #collapseOne.accordion-collapse.collapse.show(data-bs-parent='#accordionExample')
+          .accordion-body
+            p
+              | - In this section we answer the most 
+              strong frequent questions
+              |  our potential customers ask us.
+            p
+              | - If you cannot find the answer to your questions below you can write to us at the 
+              strong email
+              |  you find at the bottom of the page in your 
+              strong personal profile.
+            p - Normally we can respond within 24 hours.
+      .accordion-item
+        h2.accordion-header
+          button.accordion-button.collapsed.fw-medium(type='button', data-bs-toggle='collapse', data-bs-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+            | How much do your trips cost?
+        #collapseTwo.accordion-collapse.collapse(data-bs-parent='#accordionExample')
+          .accordion-body
+            p
+              | The cost of our trips starts from a base of 
+              strong $490 per person.
+              |  The actual cost depends a lot on the location you decide to go to and the duration of your stay. 
+              |                   For more information, we invite you to 
+              strong sign up
+              |  on our site using the button below.
+      .accordion-item
+        h2.accordion-header
+          button.accordion-button.collapsed.fw-medium(type='button', data-bs-toggle='collapse', data-bs-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+            | Once booked can I cancel?
+        #collapseThree.accordion-collapse.collapse(data-bs-parent='#accordionExample')
+          .accordion-body
+            p
+              | It depends on whether the cancellation took place within the 
+              strong time established
+              |  at the time of booking.
+      .accordion-item
+        h2.accordion-header
+          button.accordion-button.collapsed.fw-medium(type='button', data-bs-toggle='collapse', data-bs-target='#collapseFour', aria-expanded='false', aria-controls='collapseFour')
+            | Who will I go on this trip with?
+        #collapseFour.accordion-collapse.collapse(data-bs-parent='#accordionExample')
+          .accordion-body
+            p
+              | You will leave with people in your 
+              strong same age group
+              | , so you can make new and precious friends.
+      .accordion-item
+        h2.accordion-header
+          button.accordion-button.collapsed.fw-medium(type='button', data-bs-toggle='collapse', data-bs-target='#collapseFive', aria-expanded='false', aria-controls='collapseFive')
+            | Is health insurance included?
+        #collapseFive.accordion-collapse.collapse(data-bs-parent='#accordionExample')
+          .accordion-body
+            p
+              | Certainly, in the event of an accident or illness during the entire period of the trip you will be covered by our 
+              strong health insurance
+              | , in every country you are in.
+              |                   This insurance 
+              strong does not
+              |  guarantee refunds due to 
+              strong last minute cancellations
+              |  for health reasons.
+    a.btn.btn-primary.my-5.fw-medium(type='button', href='/registration') Discover our travel offers!
+ .bg-dark.text-center.text-light.py-3(style='width: 100%')
+  p.text-center Dream Holiday Agency
+  a(style='color: darkgray', href='#')
+    p.text-center Home
+  a(style='color: darkgray', href='')
+    p.text-center Terms &amp; Conditions
+  p.text-center P. Iva: 8709859089097
+ script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', integrity='sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz', crossorigin='anonymous')
+
+
+
+
+    //- h1 The best trip for you
+    //- h2 The best vacation ideas at the best price
+    //- div.bordi
+    //-   p
+    //-     | We are a travel agency that works all over the world.
+    //-     | We have collaborations with luxury hotels.
+    //-     | This allows us to give our customers the lowest prices.
+    //-   img.mare(src='https://images.pexels.com/photos/632522/pexels-photo-632522.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='Italian Trulli' style='max-width: 100%')
+    //-   p
+    //-     | If you click on the button below we will contact you and
+    //-     | We will look for the best solution for your vacation.
+    //-   form(method='get' action='/registration')
+    //-     button(type='submit') Subscribe
