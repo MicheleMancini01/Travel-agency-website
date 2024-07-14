@@ -22,5 +22,5 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-For any inquiries, please contact us at [email@example.com](michelemancini.303@gmail.com).
+For any inquiries, please contact us at [michelemancini.303@gmail.com](michelemancini.303@gmail.com).
 
